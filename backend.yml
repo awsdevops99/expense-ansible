@@ -18,7 +18,7 @@
        name: /app
        state: absent
     - name: creating the directory
-      ansib;e.builtin.file:
+      ansible.builtin.file:
         name: /app
         state: directory
     - name: download and extract the application
@@ -40,6 +40,6 @@
        state: restarted
        enabled: yes
        daemon-reload: yes
-            
+
 
 
