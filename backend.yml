@@ -26,10 +26,10 @@
         src:  https://expense-artifacts.s3.amazonaws.com/backend.zip
         dest: /app
         remote_src: yes
-    - name: install the dependencies
-      ansible.builtin.shell: npm install
-      args:
-       chdir: /app
+    - name: Install the dependencies
+      ansible.builtin.shell:
+        cmd: npm install
+        chdir: /app
     - name: install client service
       ansible.builtin.dnf:
        name: mysql
