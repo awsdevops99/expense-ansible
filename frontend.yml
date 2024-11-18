@@ -4,7 +4,7 @@
   tasks:
     - name: install the nignx
       ansible.builtin.dnf:
-        name: nignx
+        name: nginx
         state: present
     - name: copying the expense.conf
       ansible.builtin.copy:
