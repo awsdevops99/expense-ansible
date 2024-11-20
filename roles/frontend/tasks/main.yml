@@ -1,4 +1,4 @@
- - name: install the nignx
+    - name: install the nignx
       ansible.builtin.dnf:
         name: nignx
         state: present
