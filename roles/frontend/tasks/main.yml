@@ -6,6 +6,7 @@
       ansible.builtin.template:
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
+        remote_src: yes
     - name: import commom role- app-prereq
       ansible.builtin.import_role:
         name: common
