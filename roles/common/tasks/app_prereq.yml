@@ -1,4 +1,4 @@
-- name: Delete old content
+    - name: Delete old content
       ansible.builtin.file:
        name: "{{ app_dir }}"
        state: absent
