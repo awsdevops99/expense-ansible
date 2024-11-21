@@ -3,7 +3,7 @@
     - name: enable the nodejs 18
       ansible.builtin.shell: dnf module enable nodejs:18 -y
     - name: copy the backend.service file
-      ansible.builtin.copy:   
+      ansible.builtin.template:   
        src: backend.service
        dest: /etc/systemd/system/backend.service
     - name: install the nodejs
