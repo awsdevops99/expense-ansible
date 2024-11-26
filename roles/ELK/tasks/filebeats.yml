@@ -5,4 +5,4 @@
 - name: install the filebeat
   ansible.builtin.dnf:
    name: filebeat
-   state: installed     
+   state: present   
