@@ -24,3 +24,8 @@
       ansible.builtin.import_role:
        name: ELK
        tasks_from: filebeats 
+    - name: import the prometheus
+      ansible.builtin.import_role:
+       name: prometheus
+       tasks_from: node_exporter
+
