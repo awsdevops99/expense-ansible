@@ -20,10 +20,6 @@
          name: nginx
          state: restarted
          enabled: yes
-    - name: import the ELK
-      ansible.builtin.import_role:
-       name: ELK
-       tasks_from: filebeats 
     - name: import the prometheus
       ansible.builtin.import_role:
        name: prometheus
