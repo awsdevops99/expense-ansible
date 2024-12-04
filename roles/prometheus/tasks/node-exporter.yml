@@ -3,3 +3,13 @@
     src: https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
     dest: /opt
     remote_src: yes
+- name: copy the node exporter service file
+  ansible.builtin.template:
+   src: node_exporter.service
+   dest: /etc/systemd/system/node_exporter.service
+- name: start the service file
+  ansible.builtin.systemd:
+    name: node_exporter
+    state: restarted
+    enabled: yes
+    daemon-reload: yes       
