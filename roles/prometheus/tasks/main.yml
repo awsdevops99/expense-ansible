@@ -5,9 +5,19 @@
 - name: copy the alert rules
   ansible.builtin.template:
     src: alertrules.yml
-    dest: /opt/prometheus/alertrules.yml    
+    dest: /opt/prometheus/alertrules.yml
 - name: restart the premotheus
   ansible.builtin.systemd:
     name: prometheus
     state: restarted
     enabled: yes    
+
+- name: copy the alert rules
+  ansible.builtin.template:
+    src: alertmanager.yml
+    dest: /opt/alertmanager/alertmanager.yml    
+- name: restart alert manager
+  ansible.builtin.systemd:
+    name: alertmanager
+    state: restarted
+    enabled: yes
