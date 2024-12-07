@@ -129,13 +129,13 @@
       "targets": [
         {
           "editorMode": "code",
-          "expr": "node_memory_MemFree_bytes/1024 ",
-          "legendFormat": "{{ '{{' }}Memory free{{ '}}' }}",
+          "expr": "{name=\"Frontend-dev\"} node_memory_MemFree_bytes / 1024",
+          "legendFormat": "{{Memory free}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "{{ '{{' }}Memory free{{ '}}' }}",
+      "title": "{{Memory free}}",
       "type": "timeseries"
     },
     {
@@ -182,8 +182,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
-        "w": 6,
+        "h": 6,
+        "w": 7,
         "x": 0,
         "y": 5
       },
@@ -213,8 +213,8 @@
             "uid": "be6023ylbc16oa"
           },
           "editorMode": "code",
-          "expr": "up",
-          "legendFormat": "{{ '{{' }}instance{{ '}}' }}",
+          "expr": "up{name=\"Frontend-dev\"}",
+          "legendFormat": "{{instance}}",
           "range": true,
           "refId": "A"
         }
@@ -245,13 +245,13 @@
     ]
   },
   "time": {
-    "from": "2024-12-07T03:49:31.257Z",
-    "to": "2024-12-07T05:53:31.679Z"
+    "from": "now-5m",
+    "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "New dashboard",
   "uid": "ae60ad3fqsoaod",
-  "version": 6,
+  "version": 8,
   "weekStart": ""
 }
