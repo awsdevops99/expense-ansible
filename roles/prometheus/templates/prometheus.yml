@@ -31,7 +31,7 @@ scrape_configs:
     relabel_configs:
      - source_labels: [__meta_ec2_instance_id]
        target_label: instance_id
-     - sourcel_abels: [__meta_ec2_instance_type ]
+     - source_labels: [__meta_ec2_instance_type ]
        target_label: instance_type
      - source_labels: [__meta_ec2_private_ip]
        target_label: private_ip         
